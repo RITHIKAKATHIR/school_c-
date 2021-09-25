@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+void main()
+{ char ch[100];
+  cout<<"enter the string: ";
+  gets(ch);
+  if(ch[0]>='a'&&ch[0]<='z')
+  ch[0]=ch[0]-32;
+  for(int a=0;ch[a]!='\0';a++)
+   {if(ch[a]==' ')
+    {if(ch[a+1]>='a'&& ch[a+1]<='z')
+    ch[a+1]=ch[a+1]-32;
+    }
+   }
+   cout<<"the new string is: "<<ch;
+  getch();
+}

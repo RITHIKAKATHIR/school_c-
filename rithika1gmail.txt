@@ -1,0 +1,37 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+void main()
+{ char ch[100];
+ int upp, low, vow, con, dig;
+ upp=low=vow=con=dig=0;
+ cout<<"enter the string:";
+ gets(ch);
+
+   for(int a=0;ch[a]!='\0';a++)
+   {if(ch[a]>='a'&&ch[a]<='z')
+   low=low+1;
+   }
+   for(int a=0;ch[a]!='\0';a++)
+   {if(ch[a]>='A'&&ch[a]<='Z')
+   upp=upp+1;
+   }
+   for(int a=0;ch[a]!='\0';a++)
+   {if(ch[a]>='1'&&ch[a]<='9')
+   dig=dig+1;
+   }
+   for(int a=0;ch[a]!='\0';a++)
+   { if (ch[a]=='a'||ch[a]=='e'||ch[a]=='i'||ch[a]=='o'||ch[a]=='u'||ch[a]=='A'||ch[a]=='E'||ch[a]=='I'||ch[a]=='O'||ch[a]=='U')
+     vow=vow+1;
+    else if (ch[a]=='b'||ch[a]=='c'||ch[a]=='d'||ch[a]=='f'||ch[a]=='g'||ch[a]=='h'||ch[a]=='j'||ch[a]=='k'||ch[a]=='l'||ch[a]=='m'||ch[a]=='n'||ch[a]=='p'||ch[a]=='q'||ch[a]=='r'||ch[a]=='s'||ch[a]=='t'||ch[a]=='v'||ch[a]=='w'||ch[a]=='x'||ch[a]=='y'||ch[a]=='z'||ch[a]=='B'||ch[a]=='C'||ch[a]=='D'||ch[a]=='F'||ch[a]=='G'||ch[a]=='H'||ch[a]=='J'||ch[a]=='K'||ch[a]=='L'||ch[a]=='M'||ch[a]=='N'||ch[a]=='P'||ch[a]=='Q'||ch[a]=='R'||ch[a]=='S'||ch[a]=='V'||ch[a]=='W'||ch[a]=='X'||ch[a]=='Y'||ch[a]=='Z')
+     con=con+1;
+    }
+ cout<<"\nno. of lowercase: "<<low;
+ cout<<"\nno. of uppercase: "<<upp;
+ cout<<"\nno. of consonants: "<<con;
+ cout<<"\nno.of vowels: "<<vow;
+ cout<<"\nno. of digits: "<<dig;
+
+ getch();
+ }
